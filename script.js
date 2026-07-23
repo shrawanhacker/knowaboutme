@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.init("YOUR_PUBLIC_KEY"); 
     }
 
-    // 18. Preloader Logic
+    // Preloader
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         setTimeout(() => {
             if (preloader) preloader.classList.add('hidden');
-        }, 600);
+        }, 400);
     });
 
-    // 19. Cursor Glow (Disabled on Touch Devices)
+    // Cursor Glow (Disabled on Touch/Mobile Devices)
     const cursorGlow = document.getElementById('cursorGlow');
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
@@ -26,32 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 14. Dark / Light Theme Switcher with localStorage
+    // Dark / Light Theme Switcher with localStorage
     const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
     const htmlElement = document.documentElement;
     const savedTheme = localStorage.getItem('theme') || 'dark';
 
     htmlElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
+    function toggleTheme() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
     }
 
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
     function updateThemeIcon(theme) {
-        if (!themeToggle) return;
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.className = 'fa-solid fa-sun';
-        } else {
-            icon.className = 'fa-solid fa-moon';
-        }
+        const icons = document.querySelectorAll('.theme-toggle-btn i');
+        icons.forEach(icon => {
+            if (theme === 'dark') {
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+            }
+        });
     }
 
     // Typing Effect
@@ -74,20 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
             : currentRole.substring(0, charIdx + 1);
 
         charIdx += isDeleting ? -1 : 1;
-        let speed = isDeleting ? 40 : 80;
+        let speed = isDeleting ? 35 : 75;
 
         if (!isDeleting && charIdx === currentRole.length) {
-            speed = 2200; isDeleting = true;
+            speed = 2000; isDeleting = true;
         } else if (isDeleting && charIdx === 0) {
             isDeleting = false;
             roleIdx = (roleIdx + 1) % roles.length;
-            speed = 400;
+            speed = 350;
         }
         setTimeout(typeEffect, speed);
     }
     typeEffect();
 
-    // 12. Optimized Interactive Particles Canvas (Mobile Reduction)
+    // Particle Canvas Animation
     const canvas = document.getElementById('particleCanvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -104,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.6;
-                this.vy = (Math.random() - 0.5) * 0.6;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
                 this.radius = Math.random() * 2 + 1;
             }
             update() {
@@ -116,13 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(0, 120, 212, 0.4)';
+                ctx.fillStyle = 'rgba(0, 120, 212, 0.35)';
                 ctx.fill();
             }
         }
 
-        // Reduce particle count on mobile for higher FPS
-        const particleCount = window.innerWidth < 768 ? 25 : 65;
+        const particleCount = window.innerWidth < 768 ? 20 : 50;
         for (let i = 0; i < particleCount; i++) particles.push(new Particle());
 
         function animateParticles() {
@@ -132,11 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let j = idx + 1; j < particles.length; j++) {
                     const p2 = particles[j];
                     const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                    if (dist < 120) {
+                    if (dist < 110) {
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = `rgba(0, 120, 212, ${0.15 - dist / 800})`;
-                        ctx.lineWidth = 0.8;
+                        ctx.strokeStyle = `rgba(0, 120, 212, ${0.12 - dist / 900})`;
+                        ctx.lineWidth = 0.7;
                         ctx.stroke();
                     }
                 }
@@ -146,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateParticles();
     }
 
-    // 7. Scroll Reveal & Active ScrollSpy Navigation Observer
+    // Scroll Reveal & Active Navigation
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -156,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 
-                // 8. Trigger Skill Progress Bars & Percentage Counter
+                // Skill Progress Bars Trigger
                 if (entry.target.classList.contains('skill-category')) {
                     const fills = entry.target.querySelectorAll('.progress-fill');
                     const percents = entry.target.querySelectorAll('.bar-percent');
@@ -183,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => scrollObserver.observe(el));
 
-    // ScrollSpy Active Link Tracking
+    // Active Link ScrollSpy
     window.addEventListener('scroll', () => {
         let currentSection = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 120;
             if (window.scrollY >= sectionTop) {
                 currentSection = section.getAttribute('id');
             }
@@ -200,10 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 20. Back To Top Visibility
+        // Back To Top Visibility
         const backToTop = document.getElementById('backToTop');
         if (backToTop) {
-            if (window.scrollY > 400) backToTop.classList.add('visible');
+            if (window.scrollY > 350) backToTop.classList.add('visible');
             else backToTop.classList.remove('visible');
         }
     });
@@ -215,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Stats Counter Observer
+    // Stats Counter Animation
     const statNumbers = document.querySelectorAll('.stat-number');
     let counted = false;
 
@@ -225,12 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 statNumbers.forEach(stat => {
                     const target = +stat.getAttribute('data-target');
                     let count = 0;
-                    const speed = target / 40;
+                    const speed = target / 35;
                     const updateCount = () => {
                         count += speed;
                         if (count < target) {
                             stat.innerText = Math.ceil(count);
-                            setTimeout(updateCount, 30);
+                            setTimeout(updateCount, 25);
                         } else {
                             stat.innerText = target;
                         }
@@ -240,12 +242,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 counted = true;
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
 
     const statsSection = document.getElementById('stats');
     if (statsSection) statsObserver.observe(statsSection);
 
-    // 4. Contact Form Integration (EmailJS with fallback)
+    // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
@@ -256,9 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending...`;
 
-            // If EmailJS keys are configured
             if (typeof emailjs !== 'undefined' && emailjs.sendForm) {
-                // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS parameters
                 emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
                     .then(() => {
                         formStatus.className = 'form-status-msg success';
@@ -274,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Send Message`;
                     });
             } else {
-                // Fallback simulation
                 setTimeout(() => {
                     formStatus.className = 'form-status-msg success';
                     formStatus.textContent = 'Thank you! Your message has been recorded.';
@@ -290,13 +289,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
         });
     }
 
-    // Dynamic Year
+    // Dynamic Current Year
     const yearSpan = document.getElementById('currentYear');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 });
