@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrawan Kumar | Cloud Infrastructure Engineer & Azure Administrator</title>
+    
+    <!-- Comprehensive SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Portfolio of Shrawan Kumar - Cloud Infrastructure Engineer, Azure Administrator, Identity & Endpoint Management Specialist with 6+ years of enterprise IT experience.">
+    <meta name="keywords" content="Cloud Infrastructure Engineer, Azure Administrator, Microsoft Entra ID, Intune, CyberArk PAM, Zero Trust, Shrawan Kumar">
+    <meta name="author" content="Shrawan Kumar">
+    
+    <link rel="canonical" href="https://shrawankumar.tech">
+    <meta property="og:title" content="Shrawan Kumar | Cloud Infrastructure Engineer">
+    <meta property="og:description" content="Building secure, scalable enterprise infrastructure with Microsoft Azure, Entra ID, and Endpoint Security.">
+    <meta property="og:image" content="https://shrawankumar.tech/assets/og-image.png">
+    <meta property="og:url" content="https://shrawankumar.tech">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shrawan Kumar | Cloud Infrastructure Engineer">
+    <meta name="twitter:description" content="Building secure, scalable enterprise infrastructure with Microsoft Azure, Entra ID, and Endpoint Security.">
+    <meta name="twitter:image" content="https://shrawankumar.tech/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CDN Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 18. Preloader Screen -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <span class="loader-logo">&lt;Shrawan/&gt;</span>
+            <p>Cloud Infrastructure Engineer</p>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- 19. Cursor Glow (Disabled on Touch Devices) -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- 20. Back To Top Floating Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Sticky Navigation with Active ScrollSpy & Theme Toggle -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Home Page">
+                <span class="logo-accent">&lt;</span>Shrawan<span class="logo-accent">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#why-me" class="nav-link">Why Hire Me</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- 14. Theme Switcher Toggle -->
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- 10. Updated Resume Download -->
+                <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-outline btn-sm" aria-label="Download Resume PDF">
+                    <i class="fa-solid fa-download"></i> Resume
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open Mobile Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#why-me">Why Hire Me</a>
+        <a href="#contact">Contact</a>
+        <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-primary" style="margin-top: 1rem;">Download Resume</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="particleCanvas"></canvas>
+        <div class="aurora-bg"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-content reveal-up">
+                <!-- 16. Professional Badge Text -->
+                <div class="badge-pill">
+                    <span class="badge-dot"></span> Available for Full-Time Opportunities
+                </div>
+                <h1 class="hero-title">Shrawan Kumar</h1>
+                <h2 class="hero-subtitle">
+                    <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+                </h2>
+                <!-- 1. Fixed Markdown syntax to <strong> -->
+                <p class="hero-description">
+                    Building secure, scalable, and reliable enterprise IT infrastructure with <strong>Microsoft Azure</strong>, <strong>Identity & Access Management (Entra ID)</strong>, <strong>Endpoint Management (Intune)</strong>, and <strong>Enterprise Automation</strong>.
+                </p>
+                <div class="hero-cta">
+                    <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-primary" aria-label="Download Resume">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="btn btn-glass" aria-label="View Projects">
+                        <i class="fa-solid fa-diagram-project"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline" aria-label="Contact Me">
+                        <i class="fa-solid fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+
+                <!-- 17. Hero Social Icons -->
+                <!-- 2 & 3. Fixed LinkedIn and GitHub links -->
+                <div class="social-links-row">
+                    <a href="https://linkedin.com/in/shrawankumar" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/shrawankumar" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:shrawankumar.tech1@gmail.com" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+
+                <div class="hero-stats-quick">
+                    <div class="quick-stat"><span class="accent-text">6+</span> Years Exp.</div>
+                    <div class="quick-stat-divider"></div>
+                    <div class="quick-stat"><span class="accent-text">Azure</span> Certified</div>
+                    <div class="quick-stat-divider"></div>
+                    <div class="quick-stat"><span class="accent-text">Zero Trust</span> Security</div>
+                </div>
+            </div>
+
+            <!-- 5. Profile Photo Frame -->
+            <div class="hero-avatar-wrapper reveal-scale">
+                <div class="avatar-glow-ring"></div>
+                <img src="assets/profile.jpg" alt="Shrawan Kumar - Cloud Infrastructure Engineer" class="hero-avatar-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shrawan+Kumar&background=0078D4&color=fff&size=400';">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">ENGINEERING PROFILE</span>
+                <h2 class="section-title">Architecting Secure Enterprise Cloud Environments</h2>
+            </div>
+
+            <div class="about-grid reveal-up">
+                <div class="about-card glass-card">
+                    <!-- 1. Fixed Markdown syntax to <strong> -->
+                    <div class="about-text">
+                        <p>
+                            I am a <strong>Senior Cloud Infrastructure & Enterprise Systems Engineer</strong> with over 6 years of experience maintaining mission-critical IT infrastructure, optimizing Microsoft Azure environments, and enforcing Zero Trust security models across enterprise client environments.
+                        </p>
+                        <p>
+                            My core competencies center around <strong>Microsoft Azure Administration (AZ-104)</strong>, <strong>Identity Access Management (Entra ID & CyberArk PAM)</strong>, and <strong>Microsoft Intune Endpoint Security</strong>. I focus on reducing system downtime through proactive monitoring, standardizing operations via SOPs, and ensuring strict compliance with ITIL service frameworks.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-shield-halved highlight-icon"></i>
+                            <div>
+                                <h4>Identity & Access Security</h4>
+                                <p>Conditional Access, MFA rollouts, Privileged Access Management (PAM), and Directory Sync.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-cloud highlight-icon"></i>
+                            <div>
+                                <h4>Cloud & Endpoint Operations</h4>
+                                <p>Automated endpoint enrollment via Intune & Autopilot, M365 governance, and Azure administration.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-chart-line highlight-icon"></i>
+                            <div>
+                                <h4>Operational Excellence</h4>
+                                <p>ITIL Incident & Problem Management, ServiceNow dashboards, and Root Cause Analysis (RCA).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="section stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card reveal-up">
+                    <h3 class="stat-number" data-target="6">0</h3><span class="stat-plus">+</span>
+                    <p class="stat-label">Years Enterprise Experience</p>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <h3 class="stat-number" data-target="1000">0</h3><span class="stat-plus">+</span>
+                    <p class="stat-label">Infrastructure Incidents Resolved</p>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <h3 class="stat-number" data-target="98">0</h3><span class="stat-plus">%</span>
+                    <p class="stat-label">SLA & CSAT SLA Adherence</p>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                    <h3 class="stat-number" data-target="10">0</h3><span class="stat-plus">+</span>
+                    <p class="stat-label">Industry Certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">CORE COMPETENCIES</span>
+                <h2 class="section-title">Technical Expertise & Tech Stack</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Cloud & Infrastructure -->
+                <div class="skill-category glass-card reveal-up">
+                    <div class="category-header">
+                        <i class="fa-solid fa-cloud-bolt category-icon"></i>
+                        <h3>Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill"><i class="devicon-azure-plain colored"></i> Microsoft Azure</span>
+                        <span class="skill-pill"><i class="fa-solid fa-key"></i> Microsoft Entra ID</span>
+                        <span class="skill-pill"><i class="fa-solid fa-server"></i> Windows Server</span>
+                        <span class="skill-pill"><i class="devicon-linux-plain"></i> Linux Admin</span>
+                        <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Enterprise Networking</span>
+                    </div>
+                    <!-- 8. Animated Progress Bar Containers -->
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Azure Administration (AZ-104)</span><span class="bar-percent" data-target="90">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="90%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Active Directory / Hybrid IAM</span><span class="bar-percent" data-target="95">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint & IAM -->
+                <div class="skill-category glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="category-header">
+                        <i class="fa-solid fa-user-lock category-icon"></i>
+                        <h3>Identity & Endpoint Management</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill"><i class="fa-solid fa-laptop-medical"></i> Microsoft Intune</span>
+                        <span class="skill-pill"><i class="fa-solid fa-robot"></i> Windows Autopilot</span>
+                        <span class="skill-pill"><i class="fa-solid fa-vault"></i> CyberArk PAM</span>
+                        <span class="skill-pill"><i class="fa-solid fa-shield"></i> Conditional Access & MFA</span>
+                        <span class="skill-pill"><i class="fa-solid fa-lock"></i> Zero Trust</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Intune & Endpoint Management</span><span class="bar-percent" data-target="88">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="88%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>CyberArk PAM Access Control</span><span class="bar-percent" data-target="85">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scripting & Operations -->
+                <div class="skill-category glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="category-header">
+                        <i class="fa-solid fa-code category-icon"></i>
+                        <h3>Automation, ITIL & Scripting</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill"><i class="devicon-python-plain colored"></i> Python</span>
+                        <span class="skill-pill"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+                        <span class="skill-pill"><i class="devicon-git-plain colored"></i> Git & GitHub</span>
+                        <span class="skill-pill"><i class="fa-solid fa-ticket"></i> ServiceNow (ITSM)</span>
+                        <span class="skill-pill"><i class="devicon-mysql-plain colored"></i> SQL / MySQL</span>
+                        <span class="skill-pill"><i class="fa-solid fa-book"></i> ITIL V4 Framework</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>ServiceNow ITSM & Dashboards</span><span class="bar-percent" data-target="92">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="92%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>PowerShell & Infrastructure Scripting</span><span class="bar-percent" data-target="80">0%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-progress="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <!-- GROUNDED experience descriptions -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">CAREER HISTORY</span>
+                <h2 class="section-title">Enterprise Infrastructure Experience</h2>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- HCLTech -->
+                <div class="timeline-item left reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">HCLTech</h3>
+                                <h4 class="role-title">Senior Specialist — Infrastructure Operations</h4>
+                            </div>
+                            <span class="timeline-date">Enterprise Client: IHG Hotels & Resorts</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Managed CyberArk Privileged Access Management (PAM) requests, vault access configurations, and policy updates for enterprise user accounts.</li>
+                            <li>Created custom ServiceNow dashboards to track key SLA compliance metrics, CSAT scores, and high-priority incident trends.</li>
+                            <li>Authored standard operating procedures (SOPs) and knowledge base articles, enabling Level 1 teams to resolve routine access issues faster.</li>
+                            <li>Performed Root Cause Analysis (RCA) on recurring infrastructure issues to minimize repeated service disruptions.</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span>CyberArk PAM</span>
+                            <span>ServiceNow ITSM</span>
+                            <span>SOP Documentation</span>
+                            <span>Incident Management</span>
+                            <span>ITIL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infosys BPM -->
+                <div class="timeline-item right reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Infosys BPM</h3>
+                                <h4 class="role-title">Systems & Identity Support Analyst</h4>
+                            </div>
+                            <span class="timeline-date">Enterprise Client: Cummins</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Managed user lifecycle operations across Active Directory and Microsoft Entra ID (Azure AD) for hybrid enterprise accounts.</li>
+                            <li>Configured VPN access profiles, assigned M365 licenses, and resolved client-side network connection issues.</li>
+                            <li>Resolved Level 2 incidents within predefined SLA thresholds using ServiceNow ticket routing and management workflows.</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span>Microsoft Entra ID</span>
+                            <span>Active Directory</span>
+                            <span>VPN Profiles</span>
+                            <span>M365 Admin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teleperformance -->
+                <div class="timeline-item left reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Teleperformance</h3>
+                                <h4 class="role-title">Cloud Support Analyst</h4>
+                            </div>
+                            <span class="timeline-date">Enterprise Client: Microsoft</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Supported enterprise customers with Microsoft 365 services, including Teams, OneDrive for Business, and SharePoint Online.</li>
+                            <li>Troubleshot Multi-Factor Authentication (MFA) reset issues, account lockouts, and modern authentication failures.</li>
+                            <li>Assisted administrators with endpoint configuration and basic Windows 10/11 Enterprise OS troubleshooting.</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span>Microsoft 365</span>
+                            <span>Identity & MFA</span>
+                            <span>SharePoint / Teams</span>
+                            <span>Windows Enterprise</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">CREDENTIALS</span>
+                <h2 class="section-title">Professional Certifications & Badges</h2>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card glass-card reveal-up">
+                    <div class="cert-icon-wrapper azure">
+                        <i class="devicon-azure-plain"></i>
+                    </div>
+                    <h3>Microsoft Azure Fundamentals</h3>
+                    <p class="cert-code">AZ-900</p>
+                    <p class="cert-desc">Core cloud concepts, Azure architecture, compute, networking, and governance.</p>
+                </div>
+
+                <div class="cert-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="cert-icon-wrapper azure">
+                        <i class="devicon-azure-plain"></i>
+                    </div>
+                    <h3>Microsoft Azure Administrator</h3>
+                    <p class="cert-code">AZ-104</p>
+                    <p class="cert-desc">Managing Azure identities, governance, storage, compute, and virtual networks.</p>
+                </div>
+
+                <div class="cert-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="cert-icon-wrapper security">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3>Cybersecurity & PAM Essentials</h3>
+                    <p class="cert-code">CyberArk / Security</p>
+                    <p class="cert-desc">Enterprise privileged account protection, zero trust principles, and credential vaulting.</p>
+                </div>
+
+                <div class="cert-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="cert-icon-wrapper itil">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3>Major Incident Management</h3>
+                    <p class="cert-code">ITIL Standards</p>
+                    <p class="cert-desc">Handling critical severity incidents, RCA execution, and operational continuity.</p>
+                </div>
+
+                <div class="cert-card glass-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="cert-icon-wrapper dev">
+                        <i class="devicon-python-plain colored"></i>
+                    </div>
+                    <h3>Python & Database Development</h3>
+                    <p class="cert-code">Python & MySQL</p>
+                    <p class="cert-desc">Automation scripting, database management, and system tool creation.</p>
+                </div>
+
+                <div class="cert-card glass-card reveal-up" style="transition-delay: 0.5s;">
+                    <div class="cert-icon-wrapper frontend">
+                        <i class="devicon-html5-plain colored"></i>
+                    </div>
+                    <h3>Meta Frontend Developer & ADCA</h3>
+                    <p class="cert-code">Web & Software</p>
+                    <p class="cert-desc">Modern web UI/UX, responsive interfaces, and Advanced Diploma in Computer Applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Expanded Project Cards with Images, Live Demo & GitHub Repo Buttons -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">ENGINEERING PROJECTS & LABS</span>
+                <h2 class="section-title">Built Systems & Infrastructure Labs</h2>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1: Smart E-Learning Platform -->
+                <div class="project-card glass-card reveal-up">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80" alt="Smart E-Learning Platform Preview" loading="lazy">
+                        <div class="project-badge">Featured Build</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Smart E-Learning Platform</h3>
+                        <p class="project-desc">
+                            Full-stack learning application engineered with Role-Based Access Control (RBAC), secure multi-tier user authentication, interactive admin management dashboards, and responsive media streaming.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Multi-Role Auth (Admin, Instructor, Student)</li>
+                            <li><i class="fa-solid fa-check"></i> MySQL Relational Schema & Prepared Statements</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <!-- 15. Action Buttons -->
+                        <div class="project-links">
+                            <a href="https://github.com/shrawankumar/elearning-platform" target="_blank" rel="noopener" class="btn btn-outline btn-sm" aria-label="GitHub Repository">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                            <a href="#" class="btn btn-primary btn-sm" aria-label="Live Demo">
+                                <i class="fa-solid fa-external-link"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Azure Identity Lab -->
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80" alt="Azure Identity Lab Preview" loading="lazy">
+                        <div class="project-badge coming-soon">Active Lab</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Azure Identity & Conditional Access Lab</h3>
+                        <p class="project-desc">
+                            Simulated enterprise identity governance environment in Microsoft Azure. Configured risk-based Conditional Access policies, PIM role elevation, and automated Graph API scripting.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> MFA Enforcement & Trusted IP Ranges</li>
+                            <li><i class="fa-solid fa-check"></i> Azure PIM Time-Bound Privilege Access</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Microsoft Entra ID</span>
+                            <span>PowerShell</span>
+                            <span>MS Graph API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shrawankumar/azure-identity-lab" target="_blank" rel="noopener" class="btn btn-outline btn-sm" aria-label="GitHub Repository">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Intune Lab -->
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Intune Endpoint Lab Preview" loading="lazy">
+                        <div class="project-badge coming-soon">Active Lab</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Microsoft Intune & Autopilot Provisioning</h3>
+                        <p class="project-desc">
+                            Standardized endpoint enrollment profiles with Windows Autopilot, Win32 application packaging, BitLocker encryption policies, and compliance reporting.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Silent Win32 App Packaging & Deployment</li>
+                            <li><i class="fa-solid fa-check"></i> Compliance & Configuration Profiles</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Microsoft Intune</span>
+                            <span>Windows Autopilot</span>
+                            <span>Win32 Packaging</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shrawankumar/intune-automation-lab" target="_blank" rel="noopener" class="btn btn-outline btn-sm" aria-label="GitHub Repository">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Hire Me Section -->
+    <section id="why-me" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">VALUE PROPOSITION</span>
+                <h2 class="section-title">Why Hire Me for Your Infrastructure Team?</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card glass-card reveal-up">
+                    <i class="fa-solid fa-brain why-icon"></i>
+                    <h3>Enterprise Infrastructure Mindset</h3>
+                    <p>6+ years of hands-on experience supporting IT infrastructure across Fortune 500 environments (IHG, Cummins, Microsoft).</p>
+                </div>
+
+                <div class="why-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-shield-cat why-icon"></i>
+                    <h3>Identity & Security Focused</h3>
+                    <p>Practical expertise with CyberArk PAM, Entra ID Conditional Access, MFA, and privileged account access governance.</p>
+                </div>
+
+                <div class="why-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-gears why-icon"></i>
+                    <h3>Operational Rigor & SOPs</h3>
+                    <p>Focused on writing comprehensive SOPs, creating ServiceNow dashboards, and preventing recurring incidents.</p>
+                </div>
+
+                <div class="why-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-people-roof why-icon"></i>
+                    <h3>ITIL Alignment & SLA Delivery</h3>
+                    <p>Consistent track record of maintaining 98%+ SLA resolution metrics and collaborating with cross-functional teams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with EmailJS -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Connect & Collaborate</h2>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card reveal-left">
+                    <h3>Contact Information</h3>
+                    <p>Looking for a dependable Cloud Infrastructure Engineer or Azure Administrator? Reach out directly.</p>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:shrawankumar.tech1@gmail.com">shrawankumar.tech1@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span>Location</span>
+                            <p>Gurugram, Haryana, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div>
+                            <span>LinkedIn</span>
+                            <a href="https://linkedin.com/in/shrawankumar" target="_blank" rel="noopener">linkedin.com/in/shrawankumar</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fa-brands fa-github"></i>
+                        <div>
+                            <span>GitHub</span>
+                            <a href="https://github.com/shrawankumar" target="_blank" rel="noopener">github.com/shrawankumar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. EmailJS Integrated Contact Form -->
+                <form id="contactForm" class="contact-form glass-card reveal-right">
+                    <h3>Send a Direct Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="from_name" name="from_name" placeholder="Your Name" required aria-label="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required aria-label="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject / Job Opportunity" required aria-label="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="formStatus" class="form-status-msg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Clean, professional footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-social-row">
+                <a href="https://linkedin.com/in/shrawankumar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/shrawankumar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:shrawankumar.tech1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>Designed & Developed by <strong>Shrawan Kumar</strong> | Cloud Infrastructure Engineer</p>
+            <p class="footer-tech">&copy; <span id="currentYear"></span> All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
