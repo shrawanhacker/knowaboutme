@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Shrawan Kumar | Cloud Infrastructure Engineer & Azure Administrator</title>
     
     <!-- Comprehensive SEO & Open Graph Meta Tags -->
@@ -42,7 +45,7 @@
 </head>
 <body>
 
-    <!-- 18. Preloader Screen -->
+    <!-- Preloader Screen -->
     <div id="preloader" class="preloader">
         <div class="loader-content">
             <span class="loader-logo">&lt;Shrawan/&gt;</span>
@@ -51,15 +54,15 @@
         </div>
     </div>
 
-    <!-- 19. Cursor Glow (Disabled on Touch Devices) -->
+    <!-- Cursor Glow (Disabled on Touch Devices) -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- 20. Back To Top Floating Button -->
+    <!-- Back To Top Floating Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Sticky Navigation with Active ScrollSpy & Theme Toggle -->
+    <!-- Sticky Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo" aria-label="Home Page">
@@ -75,11 +78,9 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <!-- 14. Theme Switcher Toggle -->
                 <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
-                <!-- 10. Updated Resume Download -->
                 <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-outline btn-sm" aria-label="Download Resume PDF">
                     <i class="fa-solid fa-download"></i> Resume
                 </a>
@@ -99,7 +100,14 @@
         <a href="#projects">Projects</a>
         <a href="#why-me">Why Hire Me</a>
         <a href="#contact">Contact</a>
-        <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-primary" style="margin-top: 1rem;">Download Resume</a>
+        <div class="mobile-actions">
+            <button id="themeToggleMobile" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i> Switch Theme
+            </button>
+            <a href="Shrawan_Kumar_Resume.pdf" download class="btn btn-primary btn-block">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -109,7 +117,6 @@
         
         <div class="container hero-container">
             <div class="hero-content reveal-up">
-                <!-- 16. Professional Badge Text -->
                 <div class="badge-pill">
                     <span class="badge-dot"></span> Available for Full-Time Opportunities
                 </div>
@@ -117,7 +124,6 @@
                 <h2 class="hero-subtitle">
                     <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
                 </h2>
-                <!-- 1. Fixed Markdown syntax to <strong> -->
                 <p class="hero-description">
                     Building secure, scalable, and reliable enterprise IT infrastructure with <strong>Microsoft Azure</strong>, <strong>Identity & Access Management (Entra ID)</strong>, <strong>Endpoint Management (Intune)</strong>, and <strong>Enterprise Automation</strong>.
                 </p>
@@ -133,8 +139,6 @@
                     </a>
                 </div>
 
-                <!-- 17. Hero Social Icons -->
-                <!-- 2 & 3. Fixed LinkedIn and GitHub links -->
                 <div class="social-links-row">
                     <a href="https://linkedin.com/in/shrawan-gupta/" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/shrawanhacker" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
@@ -150,7 +154,6 @@
                 </div>
             </div>
 
-            <!-- 5. Profile Photo Frame -->
             <div class="hero-avatar-wrapper reveal-scale">
                 <div class="avatar-glow-ring"></div>
                 <img src="assets/profile.jpg" alt="Shrawan Kumar - Cloud Infrastructure Engineer" class="hero-avatar-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shrawan+Kumar&background=0078D4&color=fff&size=400';">
@@ -168,7 +171,6 @@
 
             <div class="about-grid reveal-up">
                 <div class="about-card glass-card">
-                    <!-- 1. Fixed Markdown syntax to <strong> -->
                     <div class="about-text">
                         <p>
                             I am a <strong>Senior Cloud Infrastructure & Enterprise Systems Engineer</strong> with over 6 years of experience maintaining mission-critical IT infrastructure, optimizing Microsoft Azure environments, and enforcing Zero Trust security models across enterprise client environments.
@@ -251,7 +253,6 @@
                         <span class="skill-pill"><i class="devicon-linux-plain"></i> Linux Admin</span>
                         <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Enterprise Networking</span>
                     </div>
-                    <!-- 8. Animated Progress Bar Containers -->
                     <div class="skill-bars">
                         <div class="skill-bar-item">
                             <div class="skill-info"><span>Azure Administration (AZ-104)</span><span class="bar-percent" data-target="90">0%</span></div>
@@ -319,7 +320,6 @@
     </section>
 
     <!-- Experience Timeline Section -->
-    <!-- GROUNDED experience descriptions -->
     <section id="experience" class="section">
         <div class="container">
             <div class="section-header text-center reveal-up">
@@ -477,105 +477,102 @@
     </section>
 
     <!-- Projects Section -->
-    <!-- Expanded Project Cards with Images, Live Demo & GitHub Repo Buttons -->
-<!-- Projects Section -->
-<!-- Expanded Project Cards with Images, Live Demo Buttons -->
-<section id="projects" class="section">
-    <div class="container">
-        <div class="section-header text-center reveal-up">
-            <span class="section-tag">ENGINEERING PROJECTS & LABS</span>
-            <h2 class="section-title">Built Systems & Infrastructure Labs</h2>
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">ENGINEERING PROJECTS & LABS</span>
+                <h2 class="section-title">Built Systems & Infrastructure Labs</h2>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card glass-card reveal-up">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80" alt="Smart E-Learning Platform Preview" loading="lazy">
+                        <div class="project-badge">Featured Build</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Smart E-Learning Platform</h3>
+                        <p class="project-desc">
+                            Full-stack learning application engineered with Role-Based Access Control (RBAC), secure multi-tier user authentication, interactive admin management dashboards, and responsive media streaming.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Multi-Role Auth (Admin, Instructor, Student)</li>
+                            <li><i class="fa-solid fa-check"></i> MySQL Relational Schema & Prepared Statements</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-sm" aria-label="Live Demo">
+                                <i class="fa-solid fa-external-link"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80" alt="Azure Identity Lab Preview" loading="lazy">
+                        <div class="project-badge coming-soon">Active Lab</div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">Azure Identity & Conditional Access Lab</h3>
+                        <p class="project-desc">
+                            Simulated enterprise identity governance environment in Microsoft Azure. Configured risk-based Conditional Access policies, PIM role elevation, and automated Graph API scripting.
+                        </p>
+
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> MFA Enforcement & Trusted IP Ranges</li>
+                            <li><i class="fa-solid fa-check"></i> Azure PIM Time-Bound Privilege Access</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <span>Microsoft Entra ID</span>
+                            <span>PowerShell</span>
+                            <span>MS Graph API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="project-image-preview">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Intune Endpoint Lab Preview" loading="lazy">
+                        <div class="project-badge coming-soon">Active Lab</div>
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">Microsoft Intune & Autopilot Provisioning</h3>
+                        <p class="project-desc">
+                            Standardized endpoint enrollment profiles with Windows Autopilot, Win32 application packaging, BitLocker encryption policies, and compliance reporting.
+                        </p>
+
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-check"></i> Silent Win32 App Packaging & Deployment</li>
+                            <li><i class="fa-solid fa-check"></i> Compliance & Configuration Profiles</li>
+                        </ul>
+
+                        <div class="project-tech">
+                            <span>Microsoft Intune</span>
+                            <span>Windows Autopilot</span>
+                            <span>Win32 Packaging</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="projects-grid">
-            
-            <!-- Project 1: Smart E-Learning Platform -->
-            <div class="project-card glass-card reveal-up">
-                <div class="project-image-preview">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80" alt="Smart E-Learning Platform Preview" loading="lazy">
-                    <div class="project-badge">Featured Build</div>
-                </div>
-                <div class="project-body">
-                    <h3 class="project-title">Smart E-Learning Platform</h3>
-                    <p class="project-desc">
-                        Full-stack learning application engineered with Role-Based Access Control (RBAC), secure multi-tier user authentication, interactive admin management dashboards, and responsive media streaming.
-                    </p>
-                    <ul class="project-features">
-                        <li><i class="fa-solid fa-check"></i> Multi-Role Auth (Admin, Instructor, Student)</li>
-                        <li><i class="fa-solid fa-check"></i> MySQL Relational Schema & Prepared Statements</li>
-                    </ul>
-
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary btn-sm" aria-label="Live Demo">
-                            <i class="fa-solid fa-external-link"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2: Azure Identity Lab -->
-            <div class="project-card glass-card reveal-up" style="transition-delay: 0.1s;">
-                <div class="project-image-preview">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80" alt="Azure Identity Lab Preview" loading="lazy">
-                    <div class="project-badge coming-soon">Active Lab</div>
-                </div>
-
-                <div class="project-body">
-                    <h3 class="project-title">Azure Identity & Conditional Access Lab</h3>
-                    <p class="project-desc">
-                        Simulated enterprise identity governance environment in Microsoft Azure. Configured risk-based Conditional Access policies, PIM role elevation, and automated Graph API scripting.
-                    </p>
-
-                    <ul class="project-features">
-                        <li><i class="fa-solid fa-check"></i> MFA Enforcement & Trusted IP Ranges</li>
-                        <li><i class="fa-solid fa-check"></i> Azure PIM Time-Bound Privilege Access</li>
-                    </ul>
-
-                    <div class="project-tech">
-                        <span>Microsoft Entra ID</span>
-                        <span>PowerShell</span>
-                        <span>MS Graph API</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Intune Lab -->
-            <div class="project-card glass-card reveal-up" style="transition-delay: 0.2s;">
-                <div class="project-image-preview">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Intune Endpoint Lab Preview" loading="lazy">
-                    <div class="project-badge coming-soon">Active Lab</div>
-                </div>
-
-                <div class="project-body">
-                    <h3 class="project-title">Microsoft Intune & Autopilot Provisioning</h3>
-                    <p class="project-desc">
-                        Standardized endpoint enrollment profiles with Windows Autopilot, Win32 application packaging, BitLocker encryption policies, and compliance reporting.
-                    </p>
-
-                    <ul class="project-features">
-                        <li><i class="fa-solid fa-check"></i> Silent Win32 App Packaging & Deployment</li>
-                        <li><i class="fa-solid fa-check"></i> Compliance & Configuration Profiles</li>
-                    </ul>
-
-                    <div class="project-tech">
-                        <span>Microsoft Intune</span>
-                        <span>Windows Autopilot</span>
-                        <span>Win32 Packaging</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Why Hire Me Section -->
     <section id="why-me" class="section">
@@ -613,7 +610,7 @@
         </div>
     </section>
 
-    <!-- Contact Section with EmailJS -->
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-header text-center reveal-up">
@@ -659,7 +656,6 @@
                     </div>
                 </div>
 
-                <!-- 4. EmailJS Integrated Contact Form -->
                 <form id="contactForm" class="contact-form glass-card reveal-right">
                     <h3>Send a Direct Message</h3>
                     <div class="form-group">
@@ -684,7 +680,6 @@
     </section>
 
     <!-- Footer -->
-    <!-- Clean, professional footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-social-row">
@@ -697,7 +692,7 @@
         </div>
     </footer>
 
-    <!-- JS Scripts -->
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
